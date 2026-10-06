@@ -1,0 +1,25 @@
+# Core Data Science & Quantitative Libraries
+pandas>=2.1.0
+numpy>=1.26.0
+scipy>=1.11.0
+scikit-learn>=1.3.0
+lightgbm>=4.1.0
+
+# Database & Environment
+python-dotenv>=1.0.0
+
+# Ingestion & Scraping APIs
+apify-client>=1.6.0
+tavily-python>=0.3.0
+requests>=2.31.0
+
+# NLP & Sentiment Scoring
+nltk>=3.8.1
+
+# Visualization & Reporting
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Quality Assurance & Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
