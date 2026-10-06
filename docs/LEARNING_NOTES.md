@@ -37,5 +37,15 @@ In quantitative finance and machine learning workflows, reproducibility and stri
 2. **Period-Aligned Target Formulation**: In quantitative strategy optimization, predicting the tick-level return of a single millisecond trade is noisy. Structuring observations into $( \text{permutation\_id}, \text{period} )$ maps the macro environment (e.g. Fed week, CPI release, disinflationary sentiment) to the aggregate efficacy (expected P&L and win rate) of a trading strategy configuration over that period.
 3. **Automated Causality Tests**: Writing automated tests that modify future data and verify that historical features remain 100% bitwise identical is the gold standard for verifying zero lookahead bias before training any predictive model.
 
+---
+
+## Stage 4: Quantitative Risk Metrics & Ranking Evaluation
+
+### What I Learned
+1. **Asymmetric Risk in Sharpe vs. Sortino**: The standard Sharpe ratio assumes returns are normally distributed and penalizes upside volatility identical to downside drawdowns. In quantitative trading, upside variance represents profitable right-tail alpha. The Sortino ratio isolates downside semi-deviation below the risk-free hurdle rate, ensuring strategies with positive skew are not unfairly penalized.
+2. **Annualization Mechanics**: Annualizing Sharpe and Sortino ratios requires multiplying by the square root of the number of compounding periods per year ($\sqrt{N}$). For our 7-day weekly evaluation blocks, the factor is $\sqrt{52} \approx 7.211$. Stating this parameter explicitly avoids the common pitfall of mixing daily ($\sqrt{252}$) and monthly ($\sqrt{12}$) assumptions.
+3. **Why Spearman Rank Correlation Trumps MSE in Meta-Modeling**: When predicting strategy parameters, our operational objective is selecting the Top-K permutations for the next period. A model could have high Mean Squared Error (e.g. predicting a return of +2% when actual was +6%), but if it correctly ranks the superior parameter permutation higher than mediocre ones (high Spearman $\rho$), the resulting portfolio allocation will be optimal.
+
+
 
 
