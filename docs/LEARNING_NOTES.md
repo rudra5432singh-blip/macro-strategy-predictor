@@ -64,6 +64,16 @@ In quantitative finance and machine learning workflows, reproducibility and stri
 2. **Dynamic Permutation Adaptation in Heatmaps**: Visualizing predicted P&L across a 2D matrix (permutations on the Y-axis, out-of-sample periods on the X-axis) reveals that the model is not static. During periods of heightened macro volatility (around CPI releases), the model downgrades tight-stop configurations and promotes wider stops that can absorb market noise.
 3. **Tracking Rank Correlation Stability Over Folds**: Monitoring Spearman rank correlation across individual walk-forward folds highlights fold-to-fold regime shifts. In stable trending regimes, rank correlation climbs up to +0.35, whereas during sudden macro transitions it experiences transient drops, underscoring why risk budgeting is necessary.
 
+---
+
+## Stage 7: Institutional Research Reporting, Honesty About Limitations & PDF Compilation
+
+### What I Learned
+1. **The Principle of Intellectual Honesty in Quant Research**: A quantitative report that only showcases positive Sharpe ratios without discussing limitations creates a false sense of security. Openly detailing synthetic trade artifacts, the finite 180-day sample size, the absence of broker execution costs (slippage/spread), and capacity limits builds real credibility with portfolio managers and risk committees.
+2. **Translating ML Predictions to Qualitative Strategy Prescriptions**: Raw regression outputs ($\hat{y} = \$320$) are unhelpful to a portfolio manager unless translated into actionable macroeconomic positioning—e.g. widening stop-loss thresholds from 1% to 3% when transitioning from inflation shocks to steady soft-landing drift.
+3. **Automated Document Compilation**: Generating dual-format deliverables (GitHub Markdown + printable PDF via ReportLab) bridges the gap between engineering version control and executive presentation.
+
+
 
 
 
