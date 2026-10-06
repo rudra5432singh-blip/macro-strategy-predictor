@@ -55,6 +55,16 @@ In quantitative finance and machine learning workflows, reproducibility and stri
 2. **Expanding-Window Realism**: Expanding-window walk-forward validation simulates the real-life operational workflow of a quantitative trading desk: at each rebalance interval, models train strictly on all available past data, freeze parameters, make a blind out-of-sample forecast for the upcoming period, and deploy capital accordingly.
 3. **Top-K Parameter Diversification**: Selecting Top-$K$ ($K=3$) rather than a single top-1 permutation acts as an ensemble within parameter space, dampening idiosyncratic trade variance while maintaining exposure to the highest-conviction region of the parameter surface.
 
+---
+
+## Stage 6: Visual Diagnostics & Quantitative Reporting Charts
+
+### What I Learned
+1. **Visualizing Underwater Equity Curves**: A raw cumulative equity curve can mask catastrophic intermediate risk if the strategy eventually recovers. Plotting a dedicated underwater drawdown panel with shaded regions exposes the depth and duration of drawdowns (e.g. 17.0% for LightGBM vs 35.4% for the Historical Mean baseline), providing an honest assessment of downside capital risk.
+2. **Dynamic Permutation Adaptation in Heatmaps**: Visualizing predicted P&L across a 2D matrix (permutations on the Y-axis, out-of-sample periods on the X-axis) reveals that the model is not static. During periods of heightened macro volatility (around CPI releases), the model downgrades tight-stop configurations and promotes wider stops that can absorb market noise.
+3. **Tracking Rank Correlation Stability Over Folds**: Monitoring Spearman rank correlation across individual walk-forward folds highlights fold-to-fold regime shifts. In stable trending regimes, rank correlation climbs up to +0.35, whereas during sudden macro transitions it experiences transient drops, underscoring why risk budgeting is necessary.
+
+
 
 
 
