@@ -1,0 +1,162 @@
+[
+  {
+    "date": "2026-04-03 08:30:00",
+    "country": "USD",
+    "event": "Non-Farm Payrolls",
+    "actual": 178.0,
+    "forecast": 165.0,
+    "previous": 182.0,
+    "importance": "HIGH",
+    "unit": "K"
+  },
+  {
+    "date": "2026-04-10 08:30:00",
+    "country": "USD",
+    "event": "CPI YoY",
+    "actual": 2.7,
+    "forecast": 2.6,
+    "previous": 2.8,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-04-29 14:00:00",
+    "country": "USD",
+    "event": "FOMC Rate Decision",
+    "actual": 4.5,
+    "forecast": 4.5,
+    "previous": 4.75,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-05-08 08:30:00",
+    "country": "USD",
+    "event": "Non-Farm Payrolls",
+    "actual": 152.0,
+    "forecast": 160.0,
+    "previous": 178.0,
+    "importance": "HIGH",
+    "unit": "K"
+  },
+  {
+    "date": "2026-05-13 08:30:00",
+    "country": "USD",
+    "event": "CPI YoY",
+    "actual": 2.5,
+    "forecast": 2.5,
+    "previous": 2.7,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-06-05 08:30:00",
+    "country": "USD",
+    "event": "Non-Farm Payrolls",
+    "actual": 145.0,
+    "forecast": 155.0,
+    "previous": 152.0,
+    "importance": "HIGH",
+    "unit": "K"
+  },
+  {
+    "date": "2026-06-11 08:30:00",
+    "country": "USD",
+    "event": "CPI YoY",
+    "actual": 2.6,
+    "forecast": 2.5,
+    "previous": 2.5,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-06-17 14:00:00",
+    "country": "USD",
+    "event": "FOMC Rate Decision",
+    "actual": 4.25,
+    "forecast": 4.25,
+    "previous": 4.5,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-07-02 08:30:00",
+    "country": "USD",
+    "event": "Non-Farm Payrolls",
+    "actual": 139.0,
+    "forecast": 140.0,
+    "previous": 145.0,
+    "importance": "HIGH",
+    "unit": "K"
+  },
+  {
+    "date": "2026-07-14 08:30:00",
+    "country": "USD",
+    "event": "CPI YoY",
+    "actual": 2.4,
+    "forecast": 2.5,
+    "previous": 2.6,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-07-29 14:00:00",
+    "country": "USD",
+    "event": "FOMC Rate Decision",
+    "actual": 4.25,
+    "forecast": 4.25,
+    "previous": 4.25,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-08-07 08:30:00",
+    "country": "USD",
+    "event": "Non-Farm Payrolls",
+    "actual": 168.0,
+    "forecast": 135.0,
+    "previous": 139.0,
+    "importance": "HIGH",
+    "unit": "K"
+  },
+  {
+    "date": "2026-08-12 08:30:00",
+    "country": "USD",
+    "event": "CPI YoY",
+    "actual": 2.5,
+    "forecast": 2.4,
+    "previous": 2.4,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-09-04 08:30:00",
+    "country": "USD",
+    "event": "Non-Farm Payrolls",
+    "actual": 128.0,
+    "forecast": 140.0,
+    "previous": 168.0,
+    "importance": "HIGH",
+    "unit": "K"
+  },
+  {
+    "date": "2026-09-11 08:30:00",
+    "country": "USD",
+    "event": "CPI YoY",
+    "actual": 2.3,
+    "forecast": 2.4,
+    "previous": 2.5,
+    "importance": "HIGH",
+    "unit": "%"
+  },
+  {
+    "date": "2026-09-16 14:00:00",
+    "country": "USD",
+    "event": "FOMC Rate Decision",
+    "actual": 4.0,
+    "forecast": 4.0,
+    "previous": 4.25,
+    "importance": "HIGH",
+    "unit": "%"
+  }
+]
