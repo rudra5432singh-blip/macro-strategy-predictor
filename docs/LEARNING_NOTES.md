@@ -19,3 +19,13 @@ In quantitative finance and machine learning workflows, reproducibility and stri
 3. **Lexicon Polarity in Quantitative NLP**: Generic language models or sentiment analyzers often stumble on financial jargon. Words like "cut" or "cooling" can carry negative linguistic sentiment, but in a macro cycle, a "rate cut" or "cooling inflation" is bullish for asset prices and duration assets. Combining financial lexicons with VADER compound scores ensures proper economic context.
 4. **Regime-Conditional Strategy Permutations**: Trading strategies do not exist in a vacuum. A tight stop-loss (1%) offers tight risk containment in calm markets, but gets whipsawed repeatedly during high-volatility macro event windows. A wider stop-loss (3%) survives volatility shocks and allows the strategy to capture larger trend extensions.
 
+---
+
+## Stage 2: Database Schema Architecture & Point-in-Time Temporal Joins
+
+### What I Learned
+1. **The Critical Difference Between Relational Joins and As-Of Joins**: In traditional databases, records match on exact keys (`id == id`). In quantitative financial pipelines, trade timestamps and event release times almost never coincide down to the second. Attempting standard equi-joins drops data or requires arbitrary time buckets.
+2. **Point-in-Time Integrity via `merge_asof`**: Using pandas `merge_asof` with `direction='backward'` guarantees that every trade is joined strictly to the most recent historical event whose publication time $\le T_{\text{trade}}$. Conversely, an upcoming event uses `direction='forward'` where $T_{\text{trade}} < T_{\text{event}}$, allowing the model to know an announcement is approaching without seeing its surprise outcome ahead of time.
+3. **Structured Indexing in SQLite**: Storing time series in SQLite requires indexing timestamp columns (`idx_trades_time`, `idx_events_time`) to prevent quadratic $O(N \times M)$ scan degradation as historical trade volume grows.
+
+
