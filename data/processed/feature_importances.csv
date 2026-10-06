@@ -1,0 +1,15 @@
+feature,importance
+stop_loss,326
+minutes_since_last_event,263
+take_profit,255
+daily_avg_news_sentiment,208
+lookback,188
+minutes_to_next_event,130
+prior_surprise,100
+prior_surprise_zscore,56
+prior_event_code,32
+is_event_day,10
+events_last_7d,3
+is_month_end,0
+hour_of_day,0
+day_of_week,0

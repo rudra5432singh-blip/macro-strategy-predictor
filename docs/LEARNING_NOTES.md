@@ -46,6 +46,16 @@ In quantitative finance and machine learning workflows, reproducibility and stri
 2. **Annualization Mechanics**: Annualizing Sharpe and Sortino ratios requires multiplying by the square root of the number of compounding periods per year ($\sqrt{N}$). For our 7-day weekly evaluation blocks, the factor is $\sqrt{52} \approx 7.211$. Stating this parameter explicitly avoids the common pitfall of mixing daily ($\sqrt{252}$) and monthly ($\sqrt{12}$) assumptions.
 3. **Why Spearman Rank Correlation Trumps MSE in Meta-Modeling**: When predicting strategy parameters, our operational objective is selecting the Top-K permutations for the next period. A model could have high Mean Squared Error (e.g. predicting a return of +2% when actual was +6%), but if it correctly ranks the superior parameter permutation higher than mediocre ones (high Spearman $\rho$), the resulting portfolio allocation will be optimal.
 
+---
+
+## Stage 5: Expanding-Window Walk-Forward Validation & Top-K Parameter Simulation
+
+### What I Learned
+1. **The Failure of Static Historical Averages**: In backtesting, static or rolling historical averages ("what worked last month") suffered severely (Annualized Sharpe of -1.8773 vs +1.0324 for LightGBM). When macroeconomic regimes shift (e.g., from calm periods to surprise Fed cuts or hot inflation), strategies optimized for prior calm conditions experience sharp drawdowns.
+2. **Expanding-Window Realism**: Expanding-window walk-forward validation simulates the real-life operational workflow of a quantitative trading desk: at each rebalance interval, models train strictly on all available past data, freeze parameters, make a blind out-of-sample forecast for the upcoming period, and deploy capital accordingly.
+3. **Top-K Parameter Diversification**: Selecting Top-$K$ ($K=3$) rather than a single top-1 permutation acts as an ensemble within parameter space, dampening idiosyncratic trade variance while maintaining exposure to the highest-conviction region of the parameter surface.
+
+
 
 
 
